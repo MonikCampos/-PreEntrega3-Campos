@@ -19,10 +19,13 @@
 <body>
     <!--inicia portada-->
     <header class="jumbotron text-light" id="goTop">
-        <strong><img class="logo .img-fluid" src="../asset/img/manjares.png" alt="Santos manjares"></strong>
+        <strong><img class="logo" src="../asset/img/manjares.png" alt="Santos manjares"></strong>
         <hr>
         <h2>Reservá tu mesa</h2>
         <p>Los sabores que te harán sentir bien. Sabemos lo que te gusta.</p>
+        <div class="btnPortada">
+            <a class="btn btn-outline-light" href="./reserva.html">Hacer una reserva</a>
+        </div>
     </header>
     <!--fin portada-->
     <main>
@@ -31,45 +34,26 @@
             <a class="navbar-brand" href="../index.html" data-toggle="tooltip" data-placement="bottom" title="Home">
                 <img src="../asset/img/home.png" alt="Menú">
             </a>
-            <h2 class="text-light">Reservas</h2>
+            <h2 class="text-light">Galería</h2>
         </nav>
         <!--navbar fin-->
         <!--inicio d-flex menú-->
         <div class="d-flex flex-column align-items-center">
-            <h2>Dejanos tu datos</h2>
-            <p>Nos comunicaremos a la brevedad</p>
+            <h2>Nuestro Local, Nuestra Gente</h2>
         </div>
         <!--fin d-flex menú-->
-        <div class="container imgForm box-shadow">
-            <form>
-                <div>
-                    <label for="email">
-                        <h5>Correo electrónico:</h5>
-                    </label>
-                    <input placeholder="Ingresa tu correo electrónico" size=30 type="email" id="email" name="email"
-                        required>
-                </div><br>
-                <div><label for="email">
-                        <h5>¿De dónde eres?:</h5>
-                    </label>
-                    <select type="email" id="provincia" name="provincia">
-                        <option value="bsas">Buenos Aires</option>
-                        <option value="cba">Córdoba</option>
-                        <option value="cba">Santa Fe</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div><br>
-                <div>
-                    <label for="message">
-                        <h5>Mensaje:</h5>
-                    </label>
-                    <textarea cols="45" rows="1" placeholder="Cuántos comensales, día y hora de la reserva" id="message"
-                        name="message" required></textarea>
-                </div>
-                <input class="btn btn-outline-light" type="submit" value="Enviar">
-                <input class="btn btn-outline-light" type="reset" value="Limpiar campos">
-            </form>
-        </div>
+        <!--inicio galería-->
+        <section class="galeria">
+            <div class="imgenGaleria img1"></div>
+            <div class="imgenGaleria img2"></div>
+            <div class="imgenGaleria img3"></div>
+            <div class="imgenGaleria img4"></div>
+            <div class="imgenGaleria img5"></div>
+            <div class="imgenGaleria img6"></div>
+            <div class="imgenGaleria img7"></div>
+            <div class="imgenGaleria img8"></div>
+        </section>
+        <!--fin galería-->
     </main>
     <!--inicio footer-->
     <footer class="container-fluid bg-dark text-light">

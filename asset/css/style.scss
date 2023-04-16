@@ -5,10 +5,11 @@
 $colorNegro: black;
 $colorBlanco: white;
 $colorVerde: green;
-$colorGrisOscuro: #333;
+$colorGrisOscuro: #343a40;
 $colorGris: grey;
 $colorGradiente1: rgba(255, 255, 255, 0.4);
 $colorGradiente2: rgba(6, 21, 6, 0.7);
+$colorGradiente3: rgba(255, 255, 255, 0.107);
 
 //Fuentes
 $fuenteTitulo: 'Cookie', cursive;;
@@ -31,11 +32,7 @@ $fuenteNormal: 'Edu NSW ACT Foundation', cursive;
     transition: $tansitionHover;
 }
 
-html {
-    @extend .overFlow;
-}
 body {
-    @extend .overFlow;
     h1 {
         @include titulosH($fuenteTitulo , 60px , $colorNegro);
         margin-top: 30px;
@@ -65,9 +62,9 @@ body {
         @include animaHover(scale(1.05), all 0.9s);
     }
     iframe {
-        text-align: center;
         height: 20em;
         border: 0;
+        width: 100%;
     }
         
 }
@@ -168,8 +165,7 @@ nav {
     }
 }
 .imgForm {
-    background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/eventos.jpg");
-    @extend .bckImage;
+    background: linear-gradient($colorGrisOscuro 70%,$colorBlanco);
     height: 300px;
     margin-bottom: 15px;
     padding-top: 30px;
