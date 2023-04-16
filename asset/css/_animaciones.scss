@@ -1,0 +1,43 @@
+//sombra movil
+.sombra_movil{
+    -webkit-transform: translateX(0);
+    -webkit-transition-duration: 0.3s;
+}
+
+.sombra_movil:hover:before{
+    opacity: 0.4;
+    -webkit-transform: translateY(6px);
+    -webkit-animation: 1.5s moversombra infinite;
+}
+
+.sombra_movil:hover{
+    -webkit-transform: translateY(-6px);
+    -webkit-animation: 1.5s movercaja infinite;
+}
+.sombra_movil:before{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(
+        center, ellipse,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0) 80%
+        );
+    -webkit-transition-duration: 0.3s;
+}
+
+@-webkit-keyframes moversombra{
+    50%{
+        opacity: 1;
+        -webkit-transform: translateY(3px);
+    }
+}
+@-webkit-keyframes movercaja{
+    50%{
+        -webkit-transform: translateY(-1px);
+    }
+}

@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
 
-
 //Paleta de Colores
 $colorNegro: black;
 $colorBlanco: white;
 $colorVerde: green;
 $colorGrisOscuro: #333;
 $colorGris: grey;
-$colorGradiente1: rgba(255, 255, 255, 0.3);
+$colorGradiente1: rgba(255, 255, 255, 0.4);
 $colorGradiente2: rgba(6, 21, 6, 0.7);
 
 //Fuentes
@@ -21,46 +20,47 @@ $fuenteNormal: 'Edu NSW ACT Foundation', cursive;
     box-sizing: border-box;
 }
 
+//uso de mixin
+@mixin titulosH ($font, $size, $color) {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+}
+@mixin animaHover ($transformHover, $tansitionHover) {
+    transform: $transformHover;
+    transition: $tansitionHover;
+}
+
 body {
     width: 100vw;
     overflow-x: hidden;
     h1 {
-        font-family: $fuenteTitulo;
-        font-size: 60px;
+        @include titulosH($fuenteTitulo , 60px , $colorNegro);
         margin-top: 30px;
         text-align: center;
     }
     h2 {
-        font-family: $fuenteTitulo;
-        font-size: 45px;
+        @include titulosH($fuenteTitulo , 45px , $colorNegro);
         margin-top: 15px;
     }
     h3 {
-        font-family: $fuenteNormal;
-        font-size: 30px;
-        color: $colorBlanco;
+        @include titulosH($fuenteNormal , 27px , $colorBlanco);
     }
     h4 {
-        font-family: $fuenteNormal;
-        font-size: 30px;
-        color: $colorVerde;
+        @include titulosH($fuenteNormal , 30px , $colorVerde);
     }
     h5 {
-        font-family: $fuenteNormal;
-        font-size: 20px;
-        color: $colorBlanco;
+        @include titulosH($fuenteNormal , 20px , $colorBlanco);
     }
     p {
-        font-family: $fuenteNormal;
-        font-size: 20px;
+        @include titulosH($fuenteNormal , 18px , $colorNegro);
     }
     button {
         text-transform: uppercase;
         font-size: 50px;
     }
     button:hover {
-        transform: scale(1.05);
-        transition: all 0.9s;
+        @include animaHover(scale(1.05), all 0.9s);
     }
     iframe {
         text-align: center;
@@ -71,97 +71,98 @@ body {
         
 }
 
+header {
+    h2{
+        color: $colorBlanco;
+    }
+    p{
+        color: $colorBlanco;
+    } 
+}
 nav {
     a {
         text-transform: uppercase;
     }
     a:hover {
-        transform: scale(1.02);
-        transition: all 0.9s;
+        @include animaHover(scale(1.02), all 0.9s);
     }
     img:hover {
-        transform: scale(1.1);
-        transition: all 0.9s;
+        @include animaHover(scale(1.1), all 0.9s);
     }   
 } 
+.overFlow {
+    overflow-x: hidden!important;
+}
 
 .container-fluid {
+    @extend .overFlow;
     justify-content: center;
-    border: 0;
-    .col-sm-12 .col-md-6 .col-lg-3 {
-        border: 0;
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-        .row {
-            border: 0;
-        } 
-    }
     .card {
-        border-color: $colorBlanco;
         text-align: center;
-        margin-bottom: 5px;
         border: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 5px;
         img{
             max-width: 85%;
             align-self: center;
         }
     } 
-    .imgForm {
-        background-color: $colorGradiente2;
-        background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/eventos.jpg");
-        background-position: top;
-        background-size: cover;
-        background-repeat: none;
-        height: 300px;
-        margin-bottom: 20px;
-        padding-top: 30px;
-        border: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
 }
 .jumbotron {
+    @extend .overFlow;
+    background-color: $colorGradiente1;
     background-image: url("../img/portada.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: none;
-    text-shadow: 0 0 5px $colorNegro;
-    width: 100%;
+    text-shadow: 0 0 5px black;
     height: 400px;
     margin-bottom: 0;
     border-radius: 0;
     padding: 20px 0 0 20px;
 }
+.container {
+    @extend .overFlow;
+    h2{
+        color: $colorBlanco;
+    }
+}
+.box-shadow {
+    box-shadow: 10px 10px 15px 0 $colorGradiente2;
+}  
 
-.imgBanner1 {
-    background-image: linear-gradient($colorGradiente1,$colorGradiente2), url("../img/cocinera1.jpg");
+//uso de extend
+.bckImage {
     background-position: top;
     background-size: cover;
     background-repeat: none;
-    background-color: $colorGradiente2;
-    height: 450px;
+    border-radius: 18px;
+    background-color: $colorGradiente1;
+}
+.imgBanner1 {
+    background-image: linear-gradient($colorGradiente1,$colorGradiente2), url("../img/cocinera1.jpg");
+    @extend .bckImage;
+    height: 300px;
     text-align: center;
     padding-top: 60px;
 }
 .imgBanner2 {
-    // background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/eventos.jpg");
-    // background-position: top;
-    // background-size: cover;
-    // background-repeat: none;
-    background-color: $colorGradiente2;
-    height: 410px;
+    background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/eventos.jpg");
+    @extend .bckImage;
+    height: 300px;
     text-align: center;
     padding-top: 60px;
 }
 .imgBanner3 {
-    // background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/principal.jpg");
-    // background-position: top;
-    // background-size: cover;
-    // background-repeat: none;
-    background-color: $colorGradiente2;
-    height: 410px;
+    background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/principal.jpg");
+    @extend .bckImage;
+    height: 280px;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 10px;
+    p {
+        color: $colorBlanco;
+    }
 }
 
 .btnMenu {
@@ -180,10 +181,9 @@ nav {
     text-align: left;
 }
 
-.btnMenu:hover .btnPortada:hover .navbar-brand:hover {
+.btnMenu:hover .btnPortada:hover .navbar-brand:hover .btn:hover{
     color: $colorBlanco;
-    transform: scale(1.05);
-    transition: all 0.9s;
+    @include animaHover(scale(1.05), all 0.9s);
 }
 
 .contacto {
@@ -195,31 +195,35 @@ nav {
     }
     i:hover {
         color: $colorBlanco;
-        transform: scale(1.05);
-        transition: all 0.9s;
+        @include animaHover(scale(1.05), all 0.9s);
     }
     
 }
 
-// .carousel { 
-//     i {
-//     font-size: 35px;
-//     color: $colorVerde;
-//     }
-//     i:hover {
-//         color:$colorBlanco;
-//         transform: scale(1.05);
-//         transition: all 0.9s;
-//     }
-//     .carousel-item {
-//         text-align: center;
-    
-//     }
-// }
+.carousel { 
+    i {
+    font-size: 35px;
+    color: $colorVerde;
+    }
+    i:hover {
+        color:$colorBlanco;
+        transform: scale(1.05);
+        transition: all 0.9s;
+    }
+}
 
+.nleft {
+    text-align: center;
+
+}
+.nright {
+    text-align: center;
+    h3 {
+        color: $colorNegro;
+    }
+}
 //inicio Grid
 .galeria {
-    width: 100%;
     background-color: $colorGrisOscuro;
     display: grid;
     grid-template-columns: 1fr;
@@ -235,40 +239,14 @@ nav {
         filter: grayscale(100%);
     }
     .imgenGaleria:hover {
-        transform: scale(1.05);
-        transition: all 0.9s;
+        @include animaHover(scale(1.05), all 0.9s);
         filter: grayscale(0%);
     }
-    .img1 {
-        background-image: url("../img/rest1.jpg");
-    }
-    
-    .img2 {
-        background-image: url("../img/rest2.jpg");
-    }
-    
-    .img3 {
-        background-image: url("../img/rest3.jpg");
-    }
-    
-    .img4 {
-        background-image: url("../img/rest4.jpg");
-    }
-    
-    .img5 {
-        background-image: url("../img/rest5.jpg");
-    }
-    
-    .img6 {
-        background-image: url("../img/rest6.jpg");
-    }
-    
-    .img7 {
-        background-image: url("../img/rest7.jpg");
-    }
-    
-    .img8 {
-        background-image: url("../img/rest8.jpg");
+    @for $in from 1 through 8 {
+        .img#{$in} {
+            $backgroundImage: "../img/rest" + #{$in}  + ".jpg";
+            background-image: url($backgroundImage);
+        }
     }
 }
 //fin Grid
@@ -287,10 +265,8 @@ footer {
             letter-spacing: 30px;
         }
         i:hover {
+            @include animaHover(scale(1.05), all 0.9s);
             color: $colorBlanco;
-            transform: scale(1.05);
-            transition: all 0.9s;
-            text-decoration: none;
         }
     }
     .imgGoTop {
@@ -300,6 +276,10 @@ footer {
         bottom: 10px;
         width: 30px;
         height: 30px;
+    }
+    p {
+        color: $colorBlanco;
+        text-align: center;
     }
 }
 
@@ -317,54 +297,47 @@ footer {
         grid-template-rows: repeat(4, 200px);
     }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .galeria {
         grid-template-columns: 1fr 1fr 1fr;
-    
-
-        .img1 {
-            grid-column: 1/3;
-            grid-row: 1/2;
-        }
-
-        .img2 {
-            grid-column: 3/4;
-            grid-row: 1/2;
-        }
-
-        .img3 {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-
-        .img4 {
-            grid-column: 2/4;
-            grid-row: 2/3;
-        }
-
-        .img5 {
-            grid-column: 1/3;
-            grid-row: 3/4;
-        }
-
-        .img6 {
-            grid-column: 3/4;
-            grid-row: 3/4;
-        }
-
-        .img7 {
-            grid-column: 1/2;
-            grid-row: 4/5;
-        }
-
-        .img8 {
-            grid-column: 2/4;
-            grid-row: 4/5;
+        @for $in from 1 through 8 {
+            .img#{$in} {
+                @if $in==1 {
+                    grid-column: 1/3;
+                    grid-row: 1/2;
+                }
+                @else if $in==2 {
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+                }
+                @else if $in==3 {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                @else if $in==4 {
+                    grid-column: 2/4;
+                    grid-row: 2/3;
+                }
+                @else if $in==5 {
+                    grid-column: 1/3;
+                    grid-row: 3/4;
+                }
+                @else if $in==6 {
+                    grid-column: 3/4;
+                    grid-row: 3/4;
+                }
+                @else if $in==7 {
+                    grid-column: 1/2;
+                    grid-row: 4/5;
+                }
+                @else if $in==8 {
+                    grid-column: 2/4;
+                    grid-row: 4/5;
+                }
+            }
         }
     }
 }
-
 @media only screen and (min-width: 1024px) {
     .galeria {
         grid-template-columns: repeat(4, 1fr);
@@ -372,28 +345,39 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1023px) {
-    .imgForm {
-        height: 350px;
-    }
-}
-
-@media only screen and (max-width:991px) and (min-width:630px) {
+@media only screen and (max-width:1200px) and (min-width:992px) {
     .imgBanner3 {
-        height: 550px;
+        height: 320px;
     }
 }
-
-@media only screen and (max-width:631px) and (min-width:470px) {
+@media only screen and (max-width:991px) and (min-width:768px) {
     .imgBanner3 {
-        height: 700px;
+        height: 470px;
     }
 }
 
-@media only screen and (max-width:471px) and (min-width:200px) {
+@media only screen and (max-width:767px) and (min-width:457px) {
     .imgBanner3 {
-        height: 900px;
+        height: 570px;
     }
 }
 
-// @import url(./_reserva.scss);
+@media only screen and (max-width:456px) and (min-width:423px) {
+    .imgBanner3 {
+        height: 670px;
+    }
+}
+
+@media only screen and (max-width:422px) and (min-width:386px) {
+    .imgBanner3 {
+        height: 770px;
+    }
+}
+@media only screen and (max-width:385px)  {
+    .imgBanner3 {
+        height: 870px;
+    }
+}
+
+@import url("./_paginas.scss");
+@import url("./_animaciones.scss");

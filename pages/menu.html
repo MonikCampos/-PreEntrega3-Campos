@@ -33,11 +33,6 @@
   <!--navbar inicia-->
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
     <a class="navbar-brand" href="../index.html" data-toggle="tooltip" data-placement="bottom" title="Home">
       <img src="../asset/img/home.png" alt="Menú">
     </a>
@@ -45,7 +40,7 @@
   </nav>
 
   <!--inicio container-fluid menú-->
-  <div class="menuEncabezado">
+  <div class="d-flex flex-column align-items-center">
     <h2>¿Qué se te apetece comer?</h2>
     <p>Algo vibrante, picante, delicioso, caramelizado, asado al horno de leña, crujiente, con mantequilla...<br>
       Deliciosas
@@ -54,10 +49,10 @@
   <!--fin container-fluid menú-->
 
   <!--inicio cards-->
-  <div class="container-fluid menu">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/Grilled Meat.jpg" alt="Grilled Meat">
           <div class="card-body">
             <h2 class="card-title">Grilled Meat</h2>
@@ -67,8 +62,9 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/Salmon Steak.jpg" alt="Salmon Steak">
+          <br>
           <div class="card-body">
             <h2 class="card-title">Salmon Steak</h2>
             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, nulla.</p>
@@ -77,7 +73,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/Chicken Breast.jpg" alt="Chicken Breast">
           <div class="card-body">
             <h2 class="card-title">Chicken Breast</h2>
@@ -87,7 +83,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/Culinary Delight.jpg" alt="Culinary Delight">
           <div class="card-body">
             <h2 class="card-title">Culinary Delight</h2>
@@ -101,7 +97,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/Seafood Casserole.jpg" alt="Seafood Casserole">
           <div class="card-body">
             <h2 class="card-title">Seafood Casserole</h2>
@@ -111,7 +107,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/grilled vegetables.jpg" alt="Grilled Vegetables">
           <div class="card-body">
             <h2 class="card-title">Grilled Vegetables</h2>
@@ -121,7 +117,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/roast meat.jpg" alt="Roast Meat">
           <div class="card-body">
             <h2 class="card-title">Roast Meat</h2>
@@ -131,7 +127,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
+        <div class="card sombra_movil">
           <img class="img-fluid" src="../asset/img/gourmet salad.jpg" alt="Gourmet Salad">
           <div class="card-body">
             <h2 class="card-title">Gourmet Salad</h2>
@@ -173,7 +169,7 @@
   </div>
 </footer>
 <!--fin footer-->
-<script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
   integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
