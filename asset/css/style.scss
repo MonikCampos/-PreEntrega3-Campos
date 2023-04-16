@@ -128,6 +128,13 @@ nav {
         color: $colorBlanco;
     }
 }
+.d-flex {
+    p {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
 .box-shadow {
     box-shadow: 10px 10px 15px 0 $colorGradiente2;
 }  
