@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Edu+NSW+ACT+Foundation:wght@500&display=swap");
-@import url("./_paginas.scss");
-@import url("./_animaciones.scss");
 * {
   margin: 0;
   padding: 0;
@@ -119,7 +117,7 @@ nav img:hover {
   box-shadow: 10px 10px 15px 0 rgba(6, 21, 6, 0.7);
 }
 
-.bckImage, .imgBanner3, .imgBanner2, .imgBanner1 {
+.bckImage, .imgForm, .imgBanner3, .imgBanner2, .imgBanner1 {
   background-position: top;
   background-size: cover;
   background-repeat: none;
@@ -149,6 +147,15 @@ nav img:hover {
 }
 .imgBanner3 p {
   color: white;
+}
+
+.imgForm {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(6, 21, 6, 0.7)), url("../img/eventos.jpg");
+  height: 300px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  border: 20px;
+  text-align: center;
 }
 
 .btnMenu {
@@ -287,6 +294,12 @@ footer p {
   text-align: center;
 }
 
+form .btn:hover {
+  transform: scale(1.05);
+  transition: all 0.9s;
+  color: black;
+}
+
 @media only screen and (min-width: 1140px) {
   .logo {
     width: 20%;
@@ -371,4 +384,31 @@ footer p {
   .imgBanner3 {
     height: 870px;
   }
+}
+.sombra_movil {
+  -webkit-transform: translateX(0);
+  -webkit-transition-duration: 0.3s;
+}
+
+.sombra_movil:hover:before {
+  opacity: 0.4;
+  -webkit-transform: translateY(6px);
+  -webkit-animation: 1.5s moversombra infinite;
+}
+
+.sombra_movil:hover {
+  -webkit-transform: translateY(-6px);
+  -webkit-animation: 1.5s movercaja infinite;
+}
+
+.sombra_movil:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+  -webkit-transition-duration: 0.3s;
 }/*# sourceMappingURL=style.css.map */

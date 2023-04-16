@@ -164,6 +164,15 @@ nav {
         color: $colorBlanco;
     }
 }
+.imgForm {
+    background-image: linear-gradient($colorGradiente1, $colorGradiente2), url("../img/eventos.jpg");
+    @extend .bckImage;
+    height: 300px;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    border: 20px;
+    text-align: center;
+}
 
 .btnMenu {
     font-family: $fuenteNormal;
@@ -283,6 +292,13 @@ footer {
     }
 }
 
+form {
+    .btn:hover{
+        @include animaHover(scale(1.05), all 0.9s);
+        color: $colorNegro;
+    }
+}
+
 //Media queries
 @media only screen and (min-width: 1140px) {
     .logo {
@@ -379,5 +395,4 @@ footer {
     }
 }
 
-@import url("./_paginas.scss");
-@import url("./_animaciones.scss");
+@import "_animaciones.scss";
