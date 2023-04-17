@@ -33,6 +33,7 @@ $fuenteNormal: 'Edu NSW ACT Foundation', cursive;
 }
 
 body {
+    @extend .overFlow;
     h1 {
         @include titulosH($fuenteTitulo , 60px , $colorNegro);
         margin-top: 30px;
@@ -40,7 +41,7 @@ body {
     }
     h2 {
         @include titulosH($fuenteTitulo , 45px , $colorNegro);
-        margin-top: 15px;
+        margin-top: 12px;
     }
     h3 {
         @include titulosH($fuenteNormal , 27px , $colorBlanco);
@@ -93,7 +94,6 @@ nav {
     }  
 } 
 .overFlow {
-    width: 100vw;
     overflow-x: hidden!important;
 }
 
