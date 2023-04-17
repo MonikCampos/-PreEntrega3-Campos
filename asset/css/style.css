@@ -114,6 +114,11 @@ nav .navbar-brand:hover {
   color: white;
 }
 
+.d-flex p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .box-shadow {
   box-shadow: 10px 10px 15px 0 rgba(6, 21, 6, 0.7);
 }
@@ -152,8 +157,8 @@ nav .navbar-brand:hover {
 
 .imgForm {
   background: linear-gradient(#343a40 70%, white);
-  height: 300px;
-  margin-bottom: 15px;
+  height: 380px;
+  margin-bottom: 20px;
   padding-top: 30px;
   border: 20px;
   text-align: center;
@@ -269,13 +274,18 @@ footer a i:hover {
   transition: all 0.9s;
   color: white;
 }
-footer .imgGoTop {
-  font-size: 45px;
+footer .imgGoTop i {
+  font-size: 50px;
   color: green;
   position: fixed;
   bottom: 10px;
   width: 30px;
   height: 30px;
+}
+footer .imgGoTop i:hover {
+  transform: scale(1.05);
+  transition: all 0.9s;
+  color: black;
 }
 footer p {
   color: white;
@@ -347,24 +357,14 @@ footer p {
     height: 470px;
   }
 }
-@media only screen and (max-width: 767px) and (min-width: 457px) {
+@media only screen and (max-width: 767px) and (min-width: 426px) {
   .imgBanner3 {
     height: 570px;
   }
 }
-@media only screen and (max-width: 456px) and (min-width: 423px) {
+@media only screen and (max-width: 425px) {
   .imgBanner3 {
-    height: 670px;
-  }
-}
-@media only screen and (max-width: 422px) and (min-width: 386px) {
-  .imgBanner3 {
-    height: 770px;
-  }
-}
-@media only screen and (max-width: 385px) {
-  .imgBanner3 {
-    height: 870px;
+    height: 700px;
   }
 }
 .sombra_movil {

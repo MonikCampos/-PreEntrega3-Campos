@@ -173,8 +173,8 @@ nav {
 }
 .imgForm {
     background: linear-gradient($colorGrisOscuro 70%,$colorBlanco);
-    height: 300px;
-    margin-bottom: 15px;
+    height: 380px;
+    margin-bottom: 20px;
     padding-top: 30px;
     border: 20px;
     text-align: center;
@@ -271,12 +271,18 @@ footer {
         }
     }
     .imgGoTop {
-        font-size: 45px;
-        color: $colorVerde;
-        position: fixed;
-        bottom: 10px;
-        width: 30px;
-        height: 30px;
+        i {
+            font-size: 50px;
+            color: $colorVerde;
+            position: fixed;
+            bottom: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        i:hover {
+            @include animaHover(scale(1.05), all 0.9s);
+            color: $colorNegro;
+        }
     }
     p {
         color: $colorBlanco;
@@ -357,28 +363,16 @@ footer {
         height: 470px;
     }
 }
-
-@media only screen and (max-width:767px) and (min-width:457px) {
+@media only screen and (max-width:767px) and (min-width:426px) {
     .imgBanner3 {
         height: 570px;
     }
 }
-
-@media only screen and (max-width:456px) and (min-width:423px) {
+@media only screen and (max-width:425px){
     .imgBanner3 {
-        height: 670px;
+        height: 700px;
     }
 }
 
-@media only screen and (max-width:422px) and (min-width:386px) {
-    .imgBanner3 {
-        height: 770px;
-    }
-}
-@media only screen and (max-width:385px)  {
-    .imgBanner3 {
-        height: 870px;
-    }
-}
 
 @import "_animaciones.scss";
