@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+html {
+  border-top: 20px solid #343a40;
+  border-left: 20px solid #343a40;
+  border-right: 20px solid #343a40;
+}
+
 body h1 {
   font-family: "Cookie", cursive;
   font-size: 60px;
@@ -75,10 +81,6 @@ nav .navbar-brand:hover {
   transform: scale(1.05);
   transition: all 0.9s;
   color: white;
-}
-
-.overFlow, body {
-  overflow-x: hidden !important;
 }
 
 .container-fluid {
@@ -217,6 +219,8 @@ nav .navbar-brand:hover {
   padding: 20px;
   grid-gap: 15px;
   margin-bottom: 20px;
+  border-left: 15px solid white;
+  border-right: 15px solid white;
 }
 .galeria .imgenGaleria {
   background-color: grey;

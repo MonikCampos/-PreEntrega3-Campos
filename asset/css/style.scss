@@ -32,8 +32,12 @@ $fuenteNormal: 'Edu NSW ACT Foundation', cursive;
     transition: $tansitionHover;
 }
 
+html {
+    border-top: 20px solid $colorGrisOscuro;
+    border-left: 20px solid $colorGrisOscuro;
+    border-right: 20px solid $colorGrisOscuro;
+}
 body {
-    @extend .overFlow;
     h1 {
         @include titulosH($fuenteTitulo , 60px , $colorNegro);
         margin-top: 30px;
@@ -66,8 +70,7 @@ body {
         height: 20em;
         border: 0;
         width: 100%;
-    }
-        
+    }    
 }
 
 header {
@@ -93,9 +96,6 @@ nav {
         color: $colorBlanco;
     }  
 } 
-.overFlow {
-    overflow-x: hidden!important;
-}
 
 .container-fluid {
     justify-content: center;
@@ -234,6 +234,8 @@ nav {
     padding: 20px;
     grid-gap: 15px;
     margin-bottom: 20px;
+    border-left: 15px solid $colorBlanco;
+    border-right: 15px solid $colorBlanco;
     .imgenGaleria {
         background-color: $colorGris;
         border: 1px solid $colorBlanco;
@@ -373,6 +375,5 @@ footer {
         height: 700px;
     }
 }
-
 
 @import "_animaciones.scss";
