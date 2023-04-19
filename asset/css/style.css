@@ -83,12 +83,9 @@ nav .navbar-brand:hover {
   color: white;
 }
 
-.container-fluid {
-  justify-content: center;
-}
 .container-fluid .card {
   text-align: center;
-  border: 0;
+  border: 10px;
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 5px;
@@ -96,6 +93,25 @@ nav .navbar-brand:hover {
 .container-fluid .card img {
   max-width: 85%;
   align-self: center;
+}
+.container-fluid .card p {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 16px;
+  color: black;
+}
+.container-fluid .cardMenu {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 15px;
+}
+.container-fluid .cardMenu img {
+  max-width: 85%;
+  align-self: center;
+}
+.container-fluid .cardMenu p {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 16px;
+  color: black;
 }
 
 .jumbotron {

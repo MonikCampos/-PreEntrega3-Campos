@@ -98,16 +98,30 @@ nav {
 } 
 
 .container-fluid {
-    justify-content: center;
     .card {
         text-align: center;
-        border: 0;
+        border: 10px;
         padding-left: 0px;
         padding-right: 0px;
         margin-bottom: 5px;
         img{
             max-width: 85%;
             align-self: center;
+        }
+        p {
+            @include titulosH($fuenteNormal , 16px , $colorNegro);
+        }
+    }
+    .cardMenu {
+        text-align: center;
+        padding: 10px;
+        margin: 10px 15px;
+        img{
+            max-width: 85%;
+            align-self: center;
+        }
+        p {
+            @include titulosH($fuenteNormal , 16px , $colorNegro);
         }
     }
 }
